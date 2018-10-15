@@ -4,6 +4,9 @@ import { ReactComponent as Arrow } from './Assets/Icons/arrow.svg'
 
 class JournalSection extends Component {
 	
+	state = {
+		articleShown: 0
+	}
 	
 // Function to extract date/month/year from the date_time string 	
 	
@@ -74,7 +77,9 @@ addSuffix(i) {
 		
 		{Data.articles.map((article, index) => {
 		
-		return <div key={index}>
+		
+		
+		return (this.state.articleShown === index) && <div key={index}>
 			<div className='date-container'>
 				{this.extractDMY(article.data_time)}
 			</div>
