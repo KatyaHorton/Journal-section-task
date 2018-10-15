@@ -74,7 +74,7 @@ addSuffix(i) {
 		
 		{Data.articles.map((article, index) => {
 		
-		return <div>
+		return <div key={index}>
 			<div className='date-container'>
 				{this.extractDMY(article.data_time)}
 			</div>
