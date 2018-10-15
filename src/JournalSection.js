@@ -5,7 +5,7 @@ import { ReactComponent as Arrow } from './Assets/Icons/arrow.svg'
 class JournalSection extends Component {
 	
 	state = {
-		articleShown: 2
+		articleShown: 1
 	}
 	
 // Function to extract date/month/year from the date_time string 	
@@ -100,8 +100,10 @@ slideLeft() {
 				{index+1}/{Data.articles.length}
 			</div>
 			<div className='buttons-container'>
-				<Arrow className='arrow-left arrow'/>
-				<Arrow className='arrow'/>
+				<button onClick={this.slideLeft.bind(this)}>
+					<Arrow className='arrow-left arrow'/></button>
+				<button onClick={this.slideRight.bind(this)}>
+					<Arrow className='arrow'/></button>
 				
 			</div>	
 			<div className='text-container'>
