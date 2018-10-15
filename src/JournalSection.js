@@ -12,13 +12,9 @@ class JournalSection extends Component {
 		const year = answer_array[0]
 		const month = answer_array[1]
 		
-// assign day a value and add a suffix to a number 
+// Assign day a value and add a suffix to a number 
 		const day = answer_array[2].split('T')[0]
 		const daySuffix = this.addSuffix(day)
-		console.log('splited_array: ', answer_array)
-		console.log('year: ', year)
-		console.log('month: ', month)
-		console.log('day: ', this.addSuffix(day))
 		return (
 		<div className='article-date'>
 			<div className='article-day'>
@@ -38,17 +34,19 @@ class JournalSection extends Component {
 addSuffix(i) {
     var j = i % 10,
         k = i % 100;
-    if (j == 1 && k != 11) {
+    if (j === 1 && k !== 11) {
         return i + "st";
     }
-    if (j == 2 && k != 12) {
+    if (j === 2 && k !== 12) {
         return i + "nd";
     }
-    if (j == 3 && k != 13) {
+    if (j === 3 && k !== 13) {
         return i + "rd";
     }
     return i + "th";
 }
+
+	
 	
   render() {
 	  
