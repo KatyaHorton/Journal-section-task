@@ -3,6 +3,21 @@ import Data from './response.json'
 
 class JournalSection extends Component {
 	
+	
+// Function to extract date/month/year from the date_time string 	
+	
+	extractDMY (date) {
+		
+		const answer_array = date.split('-');
+		const year = answer_array[0]
+		const month = answer_array[1]
+		const day = answer_array[2].split('T')[0]
+		console.log('splited_array: ', answer_array)
+		console.log('year: ', year)
+		console.log('month: ', month)
+		console.log('day: ', day)
+	}
+	
   render() {
 	  
 	  console.log(Data.articles)
@@ -14,7 +29,7 @@ class JournalSection extends Component {
 		
 		return <div>
 			<div className='time-container'>
-				{article.data_time}
+				{this.extractDMY(article.data_time)}
 			</div>
 			<div className='image-container'>
 				<img src={article.assets[0].image_url} />
