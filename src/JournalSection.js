@@ -65,30 +65,50 @@ addSuffix(i) {
 
 //Functions to change which article is shown
 
+/* 
+
+The 'articleShown' value can not be more then the number of the articles in the array, 
+when the state of 'articleShown' reaches the length of the array (-1), it sets the articleShown state back to 0
+and restarts the slide show.
+Same principle applies to the 'slideLeft()' fuction, 
+with the difference that when the state 'artcleShown' hits 0,
+it goes back to the last article.
+
+*/
+
 slideRight() {
-	this.setState({
-		articleShown: this.state.articleShown + 1
-	})
+	if (this.state.articleShown < Data.articles.length - 1) {
+		this.setState({
+			articleShown: this.state.articleShown + 1
+		})	
+	} else {
+		this.setState({
+			articleShown: 0
+		})	
+	}
 }
 
 slideLeft() {
-	this.setState({
-		articleShown: this.state.articleShown - 1
-	})
+	if (this.state.articleShown > 0) {
+		this.setState({
+			articleShown: this.state.articleShown - 1
+	})	
+	} else {
+		this.setState({
+			articleShown: Data.articles.length - 1 
+		})
+	}
 }
 
   render() {
 	  
-	  console.log(this.state.articleShown)
+	  console.log('STATE: ', this.state.articleShown )
 	  
 	  
     return (
       <div className="journal-section">
 		
 		{Data.articles.map((article, index) => {
-		
-		
-		
 		return (this.state.articleShown === index) && <div key={index}>
 			<div className='date-container'>
 				{this.extractDMY(article.data_time)}
