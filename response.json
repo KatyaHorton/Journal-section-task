@@ -1,0 +1,37 @@
+{
+  "articles": [
+    {
+      "data_time": "2018-07-15T23:00:00.000Z",
+      "assets": [
+      {
+        "image_url": "http://images.ctfassets.net/ydznnjtrnudu/3nCKCQc2VWq6ssA2qAc06y/3ed1eac5998738cd155cb794601d00be/Galery01.png"
+      }
+      ],
+      "title": "Heist Meets Emma Hoareau",
+      "body": "Did you know that today marks 40 years since Marilyn Loden coined the expression “glass ceiling” when talking about barriers to women’s advancement in the workplace at the 1978 Women’s Exposition in New York?",
+      "url": "https://www.heist-studios.com/the-vault/heist-meets-emma-hoareau"
+    },
+    {
+      "data_time": "2018-07-9T23:00:00.000Z",
+      "assets": [
+      {
+        "image_url": "http://images.ctfassets.net/ydznnjtrnudu/1ew4nyupFOESCGm6IE8iuw/d332ce75186a745298bae8ebb2d50406/Galery02.png"
+      }
+      ],
+      "title": "Heist meets Julie Montagu",
+      "body": "We’ve been following Julie Montagu for a while, both because of her awe-inspiring yoga prowess and her work in the media. And she’s just had quite the gig as the BBC’s royal reporter for the wedding everyone’s talking about: the one between Prince Harry and Meghan Markle on 19th May.",
+      "url": "https://www.heist-studios.com/the-vault/heist-meets-julie-montagu"
+    },
+    {
+      "data_time": "2018-07-9T23:00:00.000Z",
+      "assets": [
+      {
+        "image_url": "http://images.ctfassets.net/ydznnjtrnudu/1czMk0c2oCYa0W6EWyI8g2/0140625ce194aebd53d6aaecfdc8e537/Galery03.jpg"
+      }
+      ],
+      "title": "Heist meets Susanna Cordner",
+      "body": "For International Women's Day, we want to talk about underwear (surprisingly!), and we thought there was no better person to talk to than Susanna Cordner.",
+      "url": "https://www.heist-studios.com/the-vault/heist-meets-susanna-cordner"
+    }
+  ]
+}
