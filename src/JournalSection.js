@@ -105,21 +105,28 @@ slideLeft() {
       <div className="journal-section">
 		
 		{Data.articles.map((article, index) => {
-		return (this.state.articleShown === index) && <div key={index}>
-			<div className='date-image-container'>
+		return (this.state.articleShown === index) && 
+			<div key={index}
+			className='article-container'>
+			<div className='date-image-nav-container'>
+				<div className='date-image-container'>
+				<div className='date-container'>
 				{this.extractDMY(article.data_time)}
+			</div>
 				<img src={article.assets[0].image_url} />
-			</div>
-			<div className='navigate-container'>
-			<div className='article-number'>
+		 </div>
+		   			<div className='navigate-container'>
+			<p className='article-number'>
 				{index+1}/{Data.articles.length}
-			</div>
+			</p>
+			<p className='view-all-button'>VIEW ALL POSTS</p>
 			<div className='buttons-container'>
 				<button onClick={this.slideLeft.bind(this)}>
 					<Arrow className='arrow-left arrow'/></button>
 				<button onClick={this.slideRight.bind(this)}>
 					<Arrow className='arrow'/></button>
 				
+			</div>
 			</div>
 			</div>
 			<div className='text-container'>

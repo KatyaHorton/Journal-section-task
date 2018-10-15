@@ -19,7 +19,7 @@ body, html, .App {
 	  transform: rotate(180deg);
 }
 
-p, .article-month-year, .article-number {
+p, .article-month-year {
 	
 	font-size: 1.2em;
 }
@@ -32,19 +32,24 @@ h1, .article-day {
 .App {
 	margin: 18px 0 20px 20px;
 	min-width: 350px;
-	
+}
+
+.journal-section {
+	width:80%;
+	margin: 0 auto;
+	max-width: 265px;
 }
 
 
 /* Date & Image Container */
-.date-image-container{
+.date-image-nav-container{
 	position: relative;
-	height: 475px;
+	height: auto;
 	margin-bottom: 20px;
 }
 
 
-.date-image-container img{
+.date-image-nav-container img{
 	object-fit: cover;
 	height: 475px;
 	width: 265px;
@@ -54,7 +59,7 @@ h1, .article-day {
 /* Date Container */
 
 
-.article-date {
+.date-container {
 	position: absolute;
 	right: 155px;
 	top: 70px;
@@ -74,12 +79,6 @@ h1, .article-day {
 	top: -30px; 
 }
 
-.journal-section {
-	width:80%;
-	margin: 0 auto;
-	max-width: 265px;
-}
-
 
 .text-container a {
 	text-decoration: none;
@@ -92,6 +91,10 @@ h1, .article-day {
 	grid-template-columns: 1fr 1fr;
 }
 
+.view-all-button {
+		display: none;
+	}	
+
 
 .buttons-container {
 	display: grid;
@@ -103,3 +106,119 @@ button {
 	background-color: white;
 	border: none;
 }
+
+
+/* Add design to the desk top */
+
+@media screen and (min-width: 900px)  {
+	
+	.App {
+	margin: 30px auto;
+	max-width: 1100px;
+}
+
+.journal-section {
+	width:100%;
+	margin: 0 auto;
+	max-width: 100%;
+	
+}
+	
+ .article-container {
+	 display: grid;
+	 grid-template-columns: repeat(5, 1fr);
+	}	
+	
+.date-image-nav-container {
+	position: relative;
+	height: 475px;
+	margin-bottom: 20px;
+	grid-column: 1/4;
+	width: 100%;
+}
+	
+	.text-container {
+		grid-column: 4/6;
+		width: 80%;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	h1, .text-container p {
+		padding: 0;
+		margin: 0;
+	}	
+
+	p  {
+		font-size: 1em;
+	}
+.date-image-nav-container img{
+	object-fit: cover;
+	height: auto;
+	width: 100%;
+	object-position: 0 0;
+}
+	
+	.navigate-container {
+		margin-top: 20px;
+		grid-template-columns: 1fr 2fr 2fr 2fr;
+		width: 100%;
+	}	
+	
+	.article-number{
+		grid-column: 2/3;
+		padding-left: 10px;
+		
+	}
+
+	.view-all-button {
+		display: block;
+		text-align: center;
+	    grid-column: 3/4;
+	}	
+	
+	.buttons-container {
+	grid-column: 4/5;
+	column-gap: 20px;
+}
+	
+	.date-image-container {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr)
+	}
+	
+	.date-container {
+		position: relative;
+		right: 0;
+		top: 0;
+		width: auto;
+		height: 80px;
+		text-align: right;
+		transform: rotate(-90deg);
+		grid-column: 1/2;
+		margin: 0;
+		padding: 0;
+}
+	
+	.buttons-container {
+		column-gap: 0px;
+		padding-left: 20px;
+}
+	
+	.date-image-container img {
+		grid-column: 2/8;
+	}
+	
+	.article-date {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+}
+
+
+
+
+
+
+
+
