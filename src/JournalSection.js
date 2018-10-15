@@ -106,12 +106,11 @@ slideLeft() {
 		
 		{Data.articles.map((article, index) => {
 		return (this.state.articleShown === index) && <div key={index}>
-			<div className='date-container'>
+			<div className='date-image-container'>
 				{this.extractDMY(article.data_time)}
-			</div>
-			<div className='image-container'>
 				<img src={article.assets[0].image_url} />
 			</div>
+			<div className='navigate-container'>
 			<div className='article-number'>
 				{index+1}/{Data.articles.length}
 			</div>
@@ -121,11 +120,11 @@ slideLeft() {
 				<button onClick={this.slideRight.bind(this)}>
 					<Arrow className='arrow'/></button>
 				
-			</div>	
+			</div>
+			</div>
 			<div className='text-container'>
 				<h1>{article.title}</h1>
-				<p>{article.body}</p>
-				<a href={article.url}>LINK</a>
+				<p>{article.body}<a href={article.url}> (+)</a></p>
 			</div>
 			</div>
 		

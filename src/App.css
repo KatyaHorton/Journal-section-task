@@ -1,29 +1,8 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 @font-face {
 	font-family: SpaceMono-Regular;
-	src: url(./Assets/Fonts/Space_Mono/SpaceMono-Regular.ttf)		
+	src: url(./Assets/Fonts/Space_Mono/SpaceMono-Regular.ttf)
 }
 
 @font-face {
@@ -32,28 +11,95 @@
 }
 
 
+body, html, .App {
+	font-family: SpaceMono-Regular;
+}
+
 .arrow-left {
 	  transform: rotate(180deg);
 }
 
 p, .article-month-year, .article-number {
-	font-family: SpaceMono-Regular;
+	
+	font-size: 1.2em;
 }
 
 
 h1, .article-day {
-	font-family: SpaceMono-Bold;
+	
+}
+
+.App {
+	margin: 18px 0 20px 20px;
+	min-width: 350px;
+	
 }
 
 
+/* Date & Image Container */
+.date-image-container{
+	position: relative;
+	height: 475px;
+	margin-bottom: 20px;
+}
 
 
+.date-image-container img{
+	object-fit: cover;
+	height: 475px;
+	width: 265px;
+	object-position: 50% 0;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Date Container */
+
+
+.article-date {
+	position: absolute;
+	right: 155px;
+	top: 70px;
+	width: 200px;
+	height: 80px;
+	text-align: right;
+	transform: rotate(-90deg);
+}
+
+.article-day {
+	font-size: 3.6em;
+}
+
+.article-month-year {
+	font-size: 1em;
+	position: relative;
+	top: -30px; 
+}
+
+.journal-section {
+	width:80%;
+	margin: 0 auto;
+	max-width: 265px;
+}
+
+
+.text-container a {
+	text-decoration: none;
+	color: red;
+}
+
+
+.navigate-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+
+.buttons-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 20px;
+}
+
+button {
+	background-color: white;
+	border: none;
 }
