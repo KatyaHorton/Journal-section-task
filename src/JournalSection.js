@@ -15,19 +15,19 @@ class JournalSection extends Component {
 // Assign day a value and add a suffix to a number 
 		const day = answer_array[2].split('T')[0]
 		const daySuffix = this.addSuffix(day)
+		const monthName = this.getMonthName(month) 
 		return (
 		<div className='article-date'>
 			<div className='article-day'>
 				{daySuffix}
 			</div>
 			<div className='article-month-year'>
-				{month} {year}
+				{monthName} {year}
 			</div>
 		</div>
 		
 		)
 	}
-	
 	
 // Function to add suffix to a DD
 	
@@ -45,6 +45,23 @@ addSuffix(i) {
     }
     return i + "th";
 }
+	
+//	Function to get month name from date
+	
+ getMonthName(monthNumber) {
+ 
+	var monthNames = [
+		 "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+	 ];
+	 
+//Remove first character from a string if it is 0	 
+	 var monthNuberNew = monthNumber.replace(/^0+/, '')
+	 
+	 var monthName = monthNames[monthNuberNew - 1]
+	 
+	 return monthName
+	
+ }		
 
 	
 	
