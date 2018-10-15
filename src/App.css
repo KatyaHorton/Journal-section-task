@@ -21,11 +21,33 @@
 .App-link {
   color: #61dafb;
 }
+@font-face {
+	font-family: SpaceMono-Regular;
+	src: url(./Assets/Fonts/Space_Mono/SpaceMono-Regular.ttf)		
+}
+
+@font-face {
+	font-family: SpaceMono-Bold;
+	src: url(./Assets/Fonts/Space_Mono/SpaceMono-Bold.ttf)		
+}
 
 
 .arrow-left {
 	  transform: rotate(180deg);
 }
+
+p, .article-month-year, .article-number {
+	font-family: SpaceMono-Regular;
+}
+
+
+h1, .article-day {
+	font-family: SpaceMono-Bold;
+}
+
+
+
+
 
 @keyframes App-logo-spin {
   from {

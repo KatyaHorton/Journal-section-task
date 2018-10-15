@@ -68,10 +68,10 @@ addSuffix(i) {
 /* 
 
 The 'articleShown' value can not be more then the number of the articles in the array, 
-when the state of 'articleShown' reaches the length of the array (-1), it sets the articleShown state back to 0
+when the state of 'articleShown' reaches the length of the array -1, it sets the articleShown state back to 0
 and restarts the slide show.
 Same principle applies to the 'slideLeft()' fuction, 
-with the difference that when the state 'artcleShown' hits 0,
+with the difference that when the state 'articleShown' hits 0,
 it goes back to the last article.
 
 */
@@ -101,10 +101,6 @@ slideLeft() {
 }
 
   render() {
-	  
-	  console.log('STATE: ', this.state.articleShown )
-	  
-	  
     return (
       <div className="journal-section">
 		
