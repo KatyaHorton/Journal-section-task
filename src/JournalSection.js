@@ -85,7 +85,9 @@ addSuffix(i) {
 				{index+1}/{Data.articles.length}
 			</div>
 			<div className='buttons-container'>
-				<Arrow />
+				<Arrow className='arrow-left arrow'/>
+				<Arrow className='arrow'/>
+				
 			</div>	
 			<div className='text-container'>
 				<h1>{article.title}</h1>
