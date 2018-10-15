@@ -16,6 +16,18 @@ class JournalSection extends Component {
 		console.log('year: ', year)
 		console.log('month: ', month)
 		console.log('day: ', day)
+		return (
+		<div className='article-date'>
+			<div className='article-day'>
+				{day}
+			</div>
+			<div className='article-month-year'>
+				{month} {year}
+			</div>
+			
+		</div>
+		
+		)
 	}
 	
   render() {
@@ -28,7 +40,7 @@ class JournalSection extends Component {
 		{Data.articles.map((article, index) => {
 		
 		return <div>
-			<div className='time-container'>
+			<div className='date-container'>
 				{this.extractDMY(article.data_time)}
 			</div>
 			<div className='image-container'>
