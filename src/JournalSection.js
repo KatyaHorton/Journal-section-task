@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Data from './response.json'
+import { ReactComponent as Arrow } from './Assets/Icons/arrow.svg'
 
 class JournalSection extends Component {
 	
@@ -56,9 +57,7 @@ addSuffix(i) {
 	 
 //Remove first character from a string if it is 0	 
 	 var monthNuberNew = monthNumber.replace(/^0+/, '')
-	 
 	 var monthName = monthNames[monthNuberNew - 1]
-	 
 	 return monthName
 	
  }		
@@ -85,6 +84,9 @@ addSuffix(i) {
 			<div className='article-number'>
 				{index+1}/{Data.articles.length}
 			</div>
+			<div className='buttons-container'>
+				<Arrow />
+			</div>	
 			<div className='text-container'>
 				<h1>{article.title}</h1>
 				<p>{article.body}</p>
