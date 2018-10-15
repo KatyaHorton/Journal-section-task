@@ -5,7 +5,7 @@ import { ReactComponent as Arrow } from './Assets/Icons/arrow.svg'
 class JournalSection extends Component {
 	
 	state = {
-		articleShown: 0
+		articleShown: 2
 	}
 	
 // Function to extract date/month/year from the date_time string 	
@@ -50,10 +50,8 @@ addSuffix(i) {
     return i + "th";
 }
 	
-//	Function to get month name from date
-	
+//	Function to get month name from date	
  getMonthName(monthNumber) {
- 
 	var monthNames = [
 		 "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
 	 ];
@@ -61,15 +59,27 @@ addSuffix(i) {
 //Remove first character from a string if it is 0	 
 	 var monthNuberNew = monthNumber.replace(/^0+/, '')
 	 var monthName = monthNames[monthNuberNew - 1]
-	 return monthName
-	
- }		
+	 return monthName	
+ }
 
-	
-	
+
+//Functions to change which article is shown
+
+slideRight() {
+	this.setState({
+		articleShown: this.state.articleShown + 1
+	})
+}
+
+slideLeft() {
+	this.setState({
+		articleShown: this.state.articleShown - 1
+	})
+}
+
   render() {
 	  
-	  console.log(Data.articles)
+	  console.log(this.state.articleShown)
 	  
 	  
     return (
