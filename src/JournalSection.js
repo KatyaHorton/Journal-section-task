@@ -20,7 +20,7 @@ class JournalSection extends Component {
 				<img src={article.assets[0].image_url} />
 			</div>
 			<div className='article-number'>
-				{index+1}
+				{index+1}/{Data.articles.length}
 			</div>
 			<div className='text-container'>
 				<h1>{article.title}</h1>
