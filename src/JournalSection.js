@@ -17,6 +17,7 @@ class JournalSection extends Component {
 				{article.data_time}
 			</div>
 			<div className='image-container'>
+				<img src={article.assets[0].image_url} />
 			</div>
 			<div className='article-number'>
 				{index+1}
