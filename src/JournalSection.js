@@ -5,7 +5,8 @@ import { ReactComponent as Arrow } from './Assets/Icons/arrow.svg'
 class JournalSection extends Component {
 	
 	state = {
-		articleShown: 1
+		articleShown: 1,
+		showAll: false
 	}
 	
 // Function to extract date/month/year from the date_time string 	
@@ -98,6 +99,15 @@ slideLeft() {
 			articleShown: Data.articles.length - 1 
 		})
 	}
+}
+
+
+// Function to toggle showing all articles at once
+
+toggleShowAll() {
+	this.setState({
+		showAll: !this.state.showAll
+	})
 }
 
   render() {

@@ -107,6 +107,52 @@ button {
 	border: none;
 }
 
+/* Add design to min-width 600px */
+
+@media screen and (min-width: 600px)  {
+	
+.journal-section {
+	width:90%;
+	margin: 30px;
+	max-width: none;
+}
+	
+	.article-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		max-width: 590px;
+		margin: 0 auto;
+		
+	}
+	
+   .date-image-nav-container{
+	position: relative;
+	height: auto;
+	margin-bottom: 0px;
+}
+
+
+.date-image-nav-container img{
+	object-fit: cover;
+	height: 475px;
+	width: 265px;
+	object-position: 50% 0;
+}
+	
+	
+	
+	.date-container {
+		left: -120px;
+	top: 100px;
+		width: auto;
+	
+
+	}
+	
+
+	
+}
+
 
 /* Add design to the desk top */
 
@@ -125,8 +171,8 @@ button {
 }
 	
  .article-container {
-	 display: grid;
 	 grid-template-columns: repeat(5, 1fr);
+	 max-width: none;
 	}	
 	
 .date-image-nav-container {
@@ -189,8 +235,9 @@ button {
 	
 	.date-container {
 		position: relative;
+			left: 0;
 		right: 0;
-		top: 0;
+		top: 10px;
 		width: auto;
 		height: 80px;
 		text-align: right;
