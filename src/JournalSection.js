@@ -122,9 +122,9 @@ slideLeft() {
 			</p>
 			<p className='view-all-button'>VIEW ALL POSTS</p>
 			<div className='buttons-container'>
-				<button onClick={this.slideLeft.bind(this)}>
+				<button onClick={this.slideLeft.bind(this)} aria-label='slide left'>
 					<Arrow className='arrow-left arrow'/></button>
-				<button onClick={this.slideRight.bind(this)}>
+				<button onClick={this.slideRight.bind(this)} aria-label='slide right'>
 					<Arrow className='arrow'/></button>
 				
 			</div>
