@@ -101,15 +101,6 @@ slideLeft() {
 	}
 }
 
-
-// Function to toggle showing all articles at once
-
-toggleShowAll() {
-	this.setState({
-		showAll: !this.state.showAll
-	})
-}
-
   render() {
     return (
       <div className="journal-section">
@@ -123,7 +114,7 @@ toggleShowAll() {
 				<div className='date-container'>
 				{this.extractDMY(article.data_time)}
 			</div>
-				<img src={article.assets[0].image_url} />
+				<img alt= {`related to ${article.title}`} src={article.assets[0].image_url} />
 		 </div>
 		   			<div className='navigate-container'>
 			<p className='article-number'>
