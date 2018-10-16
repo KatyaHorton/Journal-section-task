@@ -109,34 +109,33 @@ slideLeft() {
 		return (this.state.articleShown === index) && 
 			<div key={index}
 			className='article-container'>
-			<div className='date-image-nav-container'>
-				<div className='date-image-container'>
-				<div className='date-container'>
-				{this.extractDMY(article.data_time)}
-			</div>
-				<img alt= {`related to ${article.title}`} src={article.assets[0].image_url} />
-		 </div>
+				<div className='date-image-nav-container'>
+					<div className='date-image-container'>
+						<div className='date-container'>{this.extractDMY(article.data_time)}
+						</div>
+							<img alt= {`related to ${article.title}`} src={article.assets[0].image_url} />
+		 			</div>
 		   			<div className='navigate-container'>
-			<p className='article-number'>
-				{index+1}/{Data.articles.length}
-			</p>
-			<p className='view-all-button'>VIEW ALL POSTS</p>
-			<div className='buttons-container'>
-				<button onClick={this.slideLeft.bind(this)} aria-label='slide left'>
-					<Arrow className='arrow-left arrow'/></button>
-				<button onClick={this.slideRight.bind(this)} aria-label='slide right'>
-					<Arrow className='arrow'/></button>
-				
-			</div>
-			</div>
-			</div>
+						<p className='article-number'>
+							{index+1}/{Data.articles.length}
+						</p>
+						<p className='view-all-button'>VIEW ALL POSTS</p>
+						<div className='buttons-container'>
+							<button onClick={this.slideLeft.bind(this)} aria-label='slide left'>
+								<Arrow className='arrow-left arrow'/>
+							</button>
+							<button onClick={this.slideRight.bind(this)} aria-label='slide right'>
+								<Arrow className='arrow'/></button>	
+						</div>
+					</div>
+				</div>
+
 			<div className='text-container'>
 				<h1>{article.title}</h1>
 				<p>{article.body}<a href={article.url}> (+)</a></p>
 			</div>
-			</div>
-		
-	})}
+		</div>	
+		})}
       </div>
     );
   }
