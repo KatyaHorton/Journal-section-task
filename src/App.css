@@ -143,10 +143,18 @@ button {
 	
 	.date-container {
 		left: -120px;
-	top: 100px;
+		top: 100px;
 		width: auto;
+	}
 	
-
+	
+	.buttons-container {
+		column-gap: 0px;
+	}
+	
+	
+	button {
+		padding: 0px;
 	}
 	
 
@@ -249,7 +257,7 @@ button {
 	
 	.buttons-container {
 		column-gap: 0px;
-		padding-left: 20px;
+		
 }
 	
 	.date-image-container img {
