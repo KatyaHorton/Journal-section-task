@@ -20,6 +20,15 @@ npm install
 npm start
 ```
 
+*********
+
+**5.** Access project on Netlify: [Netlify journal-section-task-katya-horton](https://journal-section-task-katya-horton.netlify.com/)
+
+
+*Please note that in order to access project on Netlify the link should be opened in browser (if the link is sent to you via certain messengers I recommend to copy the link and paste it in browser)*
+
+*********
+
 ### Walk-through project creating process:
 
 **1.** Create React App
@@ -47,13 +56,19 @@ git push -u origin master
 **3.** Analyse the structure of the future component and create it using imported data from the local file in a component in a re-usable manner, so that it could potentially hold X amount of article objects.
 
 **4.** Add functionality to the component's left/right buttons.
+
 *When the user reaches the last/first article in the array and keeps pressing the arrow buttons in the same direction the slide will start from the beginning/end of the article's list.*
 
-**5.** Make the web-page responsive for various devices. 
+**5.** Add styles and make the web-page responsive for various devices. 
 
 **6.** Check the code for on different devices and make changes accordingly if needed.
 
 **7.** Update the README.md file.
+
+**8.** Host project on [Netlify](https://www.netlify.com/).
+
+
+
 
 
 
