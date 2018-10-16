@@ -20,7 +20,7 @@ npm install
 npm start
 ```
 
-### Walk-through project creating proses:
+### Walk-through project creating process:
 
 **1.** Create React App
 
